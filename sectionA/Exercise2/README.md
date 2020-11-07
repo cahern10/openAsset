@@ -2,6 +2,6 @@
 
 Run using something like the following commands:
 
-'''bash
+'''py
 python magickWrapper.py inputData.json
 '''

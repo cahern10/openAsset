@@ -2,7 +2,7 @@
 
 Run using something like the following commands:
 
-'''bash
+'''py
 python magickWrapper.py smile.jpeg tester.png
 OR
 python magickWrapper.py smile.jpeg tester.png -resize 20%
