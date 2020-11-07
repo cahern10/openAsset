@@ -1,0 +1,22 @@
+[
+    {
+        "inputFile": "smile.jpeg",
+        "outputFile": "smileTestNoResize.png",
+        "resize": "none"
+    },
+    {
+        "inputFile": "smile.jpeg",
+        "outputFile": "smileTestResize.png",
+        "resize": "50%"
+    },
+    {
+        "inputFile": "puppy.jpeg",
+        "outputFile": "puppyTestNoResize.png",
+        "resize": "none"
+    },
+    {
+        "inputFile": "puppy.jpeg",
+        "outputFile": "puppyTestResize.png",
+        "resize": "50%"
+    }
+]
