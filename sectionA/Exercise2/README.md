@@ -1,7 +1,5 @@
 # openAsset
 
-Run using something like the following commands:
+Run using something like the following command:
 
-'''py
 python magickWrapper.py inputData.json
-'''
