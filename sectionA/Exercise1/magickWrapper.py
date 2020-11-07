@@ -2,22 +2,26 @@ import subprocess
 import os
 import sys
 
-def processCommand(cmd):
-    try:
-        subprocess.call(cmd, shell=True)
-        print('it worked')
-    except:
-        print('command failed :(') 
-
+"""
+validateInputPath checks to see if the input path
+    provided by the user is valid
+:param inputPath: contains the string of the path
+:return: passes back true if the function does not error out
+""" 
 def validateInputPath(inputPath):
     if not os.path.exists(inputPath):
         print('input file does not exist!')
         sys.exit(2)
     return True
 
+"""
+getCMD validates and builds the arguements in order to
+    return the command to run magick
+:param argv: contains the command line arguements
+:return: passes back the command if the function does not error out
+""" 
 def getCMD(argv):
     cmd = ''
-    #validate the input and build the command strings to return
     if ( len(argv) == 2  and validateInputPath(argv[0])):
         cmd = 'magick convert ' + str(argv[0]) + ' ' + str(argv[1]) 
     elif ( len(argv) == 4 and validateInputPath(argv[0])):
@@ -29,13 +33,20 @@ def getCMD(argv):
         sys.exit(2)
     return cmd
 
+"""
+processCommand runs the magickwrapper command build above
+:param cmd: contains the string command to run
+""" 
+def processCommand(cmd):
+    try:
+        subprocess.call(cmd, shell=True)
+        print('Command processed and completed')
+    except:
+        print('command failed :(') 
+
 def main(argv):
     cmd = getCMD(argv)
     processCommand(cmd)
-    print (cmd)
-    print(argv)
-    
-
 
 if __name__ == "__main__":
     main(sys.argv[1:])
